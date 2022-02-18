@@ -13,8 +13,6 @@
 
 - 👯 I’m looking to collaborate on [Healthy Being](https://github.com/IT0506/healthy-being)
 
-- 📝 I regularly write articles on [https://my.moodi.org/dashboard/blog](https://my.moodi.org/dashboard/blog)
-
 - 📄 Know about my experiences [https://www.linkedin.com/in/ifraah-tabassum-006618144/](https://www.linkedin.com/in/ifraah-tabassum-006618144/)
 
 <h3 align="left">Connect with me:</h3>
