@@ -9,8 +9,6 @@
 
 - 🔭 I’m currently working on **Go Green**
 
-- 🌱 I’m currently learning **HTML,CSS,JavaScript**
-
 - 👯 I’m looking to collaborate on [Healthy Being](https://github.com/IT0506/healthy-being)
 
 - 📄 Know about my experiences [https://www.linkedin.com/in/ifraah-tabassum-006618144/](https://www.linkedin.com/in/ifraah-tabassum-006618144/)
