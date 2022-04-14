@@ -7,7 +7,7 @@
 
 <p align="left"> <a href="https://twitter.com/tabassumifraah" target="blank"><img src="https://img.shields.io/twitter/follow/tabassumifraah?logo=twitter&style=for-the-badge" alt="tabassumifraah" /></a> </p>
 
-- 🔭 I’m currently working on **Go Green**
+<--- 🔭 I’m currently working on **Go Green**-->
 
 - 👯 I’m looking to collaborate on [Healthy Being](https://github.com/IT0506/healthy-being)
 
