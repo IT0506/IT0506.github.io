@@ -9,7 +9,7 @@
 
 
 
-- 👯 I’m looking to collaborate on [Healthy Being](https://github.com/IT0506/healthy-being)
+/*- 👯 I’m looking to collaborate on [Healthy Being](https://github.com/IT0506/healthy-being)*/
 
 - 📄 Know about my experiences [https://www.linkedin.com/in/ifraah-tabassum-006618144/](https://www.linkedin.com/in/ifraah-tabassum-006618144/)
 
