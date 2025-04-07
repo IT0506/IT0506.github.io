@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio Website</title>
+    <!-- google font icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <!-- local css file -->
+    <link rel="stylesheet" href="styles.css" />
+    
+  </head>
+  <body>
+    <!-- ion icons import -->
+    <!-- home section starts -->
+    <!-- header section starts -->
+<header class="header">
+    <a><i class="menu material-icons"> menu </i></a>
+    <nav class="navbar">
+      <a href="#">home</a>
+      <a href="#portfolio">portfolio</a>
+      <a href="#resume">resume</a>
+      <a href="#about">about</a>
+      <a href="#contact">contact</a>
+    </nav>
+  </header>
+  <!-- header section ends -->
+<section class="home" id="home">
+    <h1 class="hero-text">
+      hello, i'm <br />
+      <span>Ifraah Tabassum</span>
+    </h1>
+    <p>Graduated in 2024 from SRMIST NCR Campus of SRM University</p>
+    <img src="data:image/png;base64,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">
+
+  </section>
+  <section class="about" id="about">
+    <div class="box-container">
+      <div class="box">
+        <div class="image">
+          <img src="images/hero-image.jpeg" alt="" />
+        </div>
+      </div>
+  
+      <div class="box">
+        <h1 class="heading">about <span>me</span></h1>
+        <p style="font-size: large;  color: white;">
+          Graduated in 2024, I enjoy connecting the dots: be it ideas from different disciplines, people from different teams, or applications from different industries. I have an academic background in computer science engineering.
+          Besides these, I enjoy different coding styles and skills and learning to code to different problems.
+        </p>
+  <!-- home section ends -->
+  <section class="skills" id="skills">
+    <h1 class="heading">My <span>Skills</span></h1>
+    <div class="skill-container">
+      <div class="box">
+        <img src="https://th.bing.com/th/id/OIP.M5WYwHUsOn3-r0yWrDDJTQHaHa?w=170&h=180&c=7&r=0&o=5&pid=1.7">
+        <img src="https://th.bing.com/th/id/OIP.tAvAD5lCtDJSjywplxd37QHaEo?w=264&h=180&c=7&r=0&o=5&pid=1.7">
+        <img src="https://th.bing.com/th/id/OIP.TEgFPtleKKLsfG47eEscFgHaHa?w=178&h=178&c=7&r=0&o=5&pid=1.7">
+        <img src="https://th.bing.com/th/id/OIP.Ue2JZ0sSt-1MEZJNdi9IfwHaIi?w=159&h=182&c=7&r=0&o=5&pid=1.7">
+        <img src="https://th.bing.com/th/id/OIP.Tf4BFI6846neirVSebC0vAAAAA?w=277&h=180&c=7&r=0&o=5&pid=1.7">
+        </div>
+        </div>
+  <!-- portfolio section starts -->
+<section class="portfolio" id="portfolio">
+    <h1 class="heading">featured <span>portfolio</span></h1>
+  
+    <div class="box-container">
+      <div class="box">
+        <div class="image">
+          <img src= "C:\Mini Project\ss.png"
+                 width="100" 
+                 height="100"/>
+          <div class="content">
+            <h2>Code-O-Soccer</h2>
+          </div>
+        </div>
+      </div>
+  
+      <div class="box">
+        <div class="image">
+          <img src="C:\18CSP111L_&_18CSP112L\Project_work\abc.jpg" alt="" />
+          <div class="content">
+            <h2>RosterNotar</h2>
+          </div>
+        </div>
+      </div>
+  
+      <!--div class="box">
+        <div class="image">
+          <img src="images/portfolio-3.jpeg" alt="" />
+          <div class="content">
+            <h2>project #3</h2>
+          </div>
+        </div>
+      </div--> 
+    </div>
+  </section>
+  <!-- portfolio section ends -->
+  <!-- resume section starts -->
+<section class="resume" id="resume">
+  <h1 class="heading">my <span>resume</span></h1>
+  <div class="col-container">
+    <div class="col">
+      <h2>education</h2>
+      <div class="box">
+        <span><i class="material-icons"> calendar_today </i> Sep 2020 - Jun 2024</span>
+        <h3>B.Tech in computer science</h3>
+        <p>
+          Graduated in course-B.Tech(CSE) in 2024, I enjoy connecting the dots: be it ideas from different disciplines, people from different teams, or applications from different industries. I have an academic background in computer science engineering.
+        </p>
+        <p class="university">SRMIST</p>
+      </div>
+
+      <div class="box">
+        <span><i class="material-icons"> calendar_today </i> April 2018 - Mar 2020</span>
+        <h3>Intermediate</h3>
+        <p>
+          Completed higher senior secondary school education with an aggregate of 89.4%.
+        </p>
+        <p class="university">Shiv Jyoti International School</p>
+      </div>
+
+      <div class="box">
+        <span><i class="material-icons"> calendar_today </i> Apr 2016 - Mar 2018</span>
+        <h3>Matric</h3>
+        <p>
+          Completed higher senior secondary school education with an aggregate of 94.4%.
+        </p>
+        <p class="university">Kendriya Vidyalaya Gail Vijaipur</p>
+      </div>
+
+      <div class="box">
+        <span><i class="material-icons"> calendar_today </i> Apr 2006 - Mar 2016</span>
+        <h3>Upto class 8</h3>
+        <p>
+          Overall grade : A1
+        </p>
+        <p class="university">SSSVV Gail Vijaipur</p>
+      </div>
+    </div>
+
+    <div class="col">
+      <h2>experience</h2>
+      <div class="box">
+        <span><i class="material-icons"> calendar_today </i> Aug 2022 - Sep 2022</span>
+        <h3>Web developer</h3>
+        <p>
+          Worked on the front-end skills HTML5, CSS.
+        </p>
+        <p class="university">Raise Digital in collaboration with Techniche-IIT Guwahati</p>
+      </div>
+
+      <div class="box">
+        <span><i class="material-icons"> calendar_today </i> Jan 2022 - Feb 2022</span>
+        <h3>Product and UI/UX designer intern</h3>
+        <p>
+          Worked with Figma creativity tool.
+        </p>
+        <p class="university">Wissenaire, IIT Bhubaneshwar</p>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- resume section ends -->
+<!-- about section starts -->
+
+      <a href="#" class="btn">hire me</a>
+      <a href="#" class="btn">download cv</a>
+    </div>
+  </div>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-example" crossorigin="anonymous" />
+  <a href="https://in.linkedin.com/in/ifraah-tabassum-006618144/" target="_blank" rel="noopener noreferrer">
+    <i class="fab fa-linkedin fa-2x">Ifraah Tabassum</i> <!-- Adjust size (fa-2x, fa-3x, etc.) as needed -->
+</a>
+</section>
+<div class="badge-base LI-profile-badge" data-locale="en_US" data-size="large" data-theme="light" data-type="VERTICAL" data-vanity="ifraah-tabassum-006618144" data-version="v1"><a class="badge-base__link LI-simple-link" href="https://in.linkedin.com/in/ifraah-tabassum-006618144?trk=profile-badge">Ifraah Tabassum</a></div>
+<script src="https://platform.linkedin.com/badges/js/profile.js" async defer type="text/javascript"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <!-- local js file -->
+    <script src="script.js"></script>
+  </body>
+</html>
