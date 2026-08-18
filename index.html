@@ -1,184 +1,2634 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portfolio Website</title>
-    <!-- google font icons -->
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
-    <!-- local css file -->
-    <link rel="stylesheet" href="styles.css" />
-    
-  </head>
-  <body>
-    <!-- ion icons import -->
-    <!-- home section starts -->
-    <!-- header section starts -->
-<header class="header">
-    <a><i class="menu material-icons"> menu </i></a>
-    <nav class="navbar">
-      <a href="#">home</a>
-      <a href="#portfolio">portfolio</a>
-      <a href="#resume">resume</a>
-      <a href="#about">about</a>
-      <a href="#contact">contact</a>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <meta
+    name="description"
+    content="Ifraah Tabassum — Computer Science Engineer, Full Stack Developer and Software Engineer."
+  />
+
+  <meta name="author" content="Ifraah Tabassum" />
+
+  <title>Ifraah Tabassum | Software Engineer & Full Stack Developer</title>
+
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- Font Awesome -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+  />
+
+  <!-- QR Code Library -->
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"
+    defer
+  ></script>
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+
+  <!-- ================================
+       BACKGROUND
+  ================================= -->
+
+  <div class="background-glow glow-one"></div>
+  <div class="background-glow glow-two"></div>
+
+  <!-- ================================
+       HEADER
+  ================================= -->
+
+  <header class="header" id="header">
+
+    <a href="#home" class="logo">
+      Ifraah<span>.</span>
+    </a>
+
+    <nav class="navbar" id="navbar">
+
+      <a href="#home" class="nav-link active">Home</a>
+      <a href="#about" class="nav-link">About</a>
+      <a href="#skills" class="nav-link">Skills</a>
+      <a href="#experience" class="nav-link">Experience</a>
+      <a href="#education" class="nav-link">Education</a>
+      <a href="#portfolio" class="nav-link">Projects</a>
+      <a href="#certificates" class="nav-link">Certificates</a>
+      <a href="#contact" class="nav-link">Contact</a>
+
     </nav>
+
+    <button
+      class="menu-btn"
+      id="menuBtn"
+      type="button"
+      aria-label="Open navigation menu"
+      aria-expanded="false"
+    >
+      <i class="fas fa-bars"></i>
+    </button>
+
   </header>
-  <!-- header section ends -->
-<section class="home" id="home">
-    <h1 class="hero-text">
-      hello, i'm <br />
-      <span>Ifraah Tabassum</span>
-    </h1>
-    <p>Graduated in 2024 from SRMIST NCR Campus of SRM University</p>
-    <img src="data:image/png;base64,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">
 
-  </section>
-  <section class="about" id="about">
-    <div class="box-container">
-      <div class="box">
-        <div class="image">
-          <img src="images/hero-image.jpeg" alt="" />
-        </div>
-      </div>
-  
-      <div class="box">
-        <h1 class="heading">about <span>me</span></h1>
-        <p style="font-size: large;  color: white;">
-          Graduated in 2024, I enjoy connecting the dots: be it ideas from different disciplines, people from different teams, or applications from different industries. I have an academic background in computer science engineering.
-          Besides these, I enjoy different coding styles and skills and learning to code to different problems.
-        </p>
-  <!-- home section ends -->
-  <section class="skills" id="skills">
-    <h1 class="heading">My <span>Skills</span></h1>
-    <div class="skill-container">
-      <div class="box">
-        <img src="https://th.bing.com/th/id/OIP.M5WYwHUsOn3-r0yWrDDJTQHaHa?w=170&h=180&c=7&r=0&o=5&pid=1.7">
-        <img src="https://th.bing.com/th/id/OIP.tAvAD5lCtDJSjywplxd37QHaEo?w=264&h=180&c=7&r=0&o=5&pid=1.7">
-        <img src="https://th.bing.com/th/id/OIP.TEgFPtleKKLsfG47eEscFgHaHa?w=178&h=178&c=7&r=0&o=5&pid=1.7">
-        <img src="https://th.bing.com/th/id/OIP.Ue2JZ0sSt-1MEZJNdi9IfwHaIi?w=159&h=182&c=7&r=0&o=5&pid=1.7">
-        <img src="https://th.bing.com/th/id/OIP.Tf4BFI6846neirVSebC0vAAAAA?w=277&h=180&c=7&r=0&o=5&pid=1.7">
-        </div>
-        </div>
-  <!-- portfolio section starts -->
-<section class="portfolio" id="portfolio">
-    <h1 class="heading">featured <span>portfolio</span></h1>
-  
-    <div class="box-container">
-      <div class="box">
-        <div class="image">
-          <img src= "C:\Mini Project\ss.png"
-                 width="100" 
-                 height="100"/>
-          <div class="content">
-            <h2>Code-O-Soccer</h2>
+
+  <main>
+
+    <!-- ================================
+         HERO
+    ================================= -->
+
+    <section class="home section" id="home">
+
+      <div class="hero-container">
+
+        <div class="hero-text reveal">
+
+          <div class="available-badge">
+            <span class="status-dot"></span>
+            Open to Software Development Opportunities
           </div>
-        </div>
-      </div>
-  
-      <div class="box">
-        <div class="image">
-          <img src="C:\18CSP111L_&_18CSP112L\Project_work\abc.jpg" alt="" />
-          <div class="content">
-            <h2>RosterNotar</h2>
+
+          <p class="hero-intro">
+            Hello, I'm
+          </p>
+
+          <h1>
+            Ifraah <span>Tabassum</span>
+          </h1>
+
+          <h2>
+            Software Engineer
+            <span>·</span>
+            Full Stack Developer
+          </h2>
+
+          <p class="hero-description">
+            B.Tech Computer Science & Engineering graduate with experience
+            across full-stack development, backend engineering, web development,
+            UI/UX, RPA and software projects.
+          </p>
+
+          <div class="hero-buttons">
+
+            <a href="#portfolio" class="btn primary-btn">
+              <i class="fas fa-code"></i>
+              Explore My Work
+            </a>
+
+            <a href="resume.pdf" class="btn secondary-btn" download>
+              <i class="fas fa-file-arrow-down"></i>
+              Download CV
+            </a>
+
           </div>
-        </div>
-      </div>
-  
-      <!--div class="box">
-        <div class="image">
-          <img src="images/portfolio-3.jpeg" alt="" />
-          <div class="content">
-            <h2>project #3</h2>
+
+          <div class="socials">
+
+            <a
+              href="https://www.linkedin.com/in/ifraah-tabassum/"
+              target="_blank"
+              aria-label="LinkedIn"
+            >
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+
+            <a
+              href="https://github.com/IT0506"
+              target="_blank"
+              aria-label="GitHub"
+            >
+              <i class="fab fa-github"></i>
+            </a>
+
+            <a
+              href="mailto:tabassumifraah@gmail.com"
+              aria-label="Email"
+            >
+              <i class="fas fa-envelope"></i>
+            </a>
+
           </div>
+
         </div>
-      </div--> 
-    </div>
-  </section>
-  <!-- portfolio section ends -->
-  <!-- resume section starts -->
-<section class="resume" id="resume">
-  <h1 class="heading">my <span>resume</span></h1>
-  <div class="col-container">
-    <div class="col">
-      <h2>education</h2>
-      <div class="box">
-        <span><i class="material-icons"> calendar_today </i> Sep 2020 - Jun 2024</span>
-        <h3>B.Tech in computer science</h3>
-        <p>
-          Graduated in course-B.Tech(CSE) in 2024, I enjoy connecting the dots: be it ideas from different disciplines, people from different teams, or applications from different industries. I have an academic background in computer science engineering.
-        </p>
-        <p class="university">SRMIST</p>
+
+
+        <div class="hero-visual reveal">
+
+          <div class="hero-orbit orbit-one"></div>
+          <div class="hero-orbit orbit-two"></div>
+
+          <div class="profile-glow">
+
+            <div class="profile-placeholder">
+              <i class="fas fa-user-tie"></i>
+            </div>
+
+          </div>
+
+          <div class="floating-tech tech-one">
+            <i class="fab fa-java"></i>
+          </div>
+
+          <div class="floating-tech tech-two">
+            <i class="fab fa-react"></i>
+          </div>
+
+          <div class="floating-tech tech-three">
+            <i class="fab fa-js"></i>
+          </div>
+
+        </div>
+
       </div>
 
-      <div class="box">
-        <span><i class="material-icons"> calendar_today </i> April 2018 - Mar 2020</span>
-        <h3>Intermediate</h3>
-        <p>
-          Completed higher senior secondary school education with an aggregate of 89.4%.
-        </p>
-        <p class="university">Shiv Jyoti International School</p>
+    </section>
+
+
+    <!-- ================================
+         ABOUT
+    ================================= -->
+
+    <section class="section about" id="about">
+
+      <div class="section-heading reveal">
+        <span>01</span>
+        <p>ABOUT ME</p>
+        <h2>Building with <strong>curiosity</strong> and purpose.</h2>
       </div>
 
-      <div class="box">
-        <span><i class="material-icons"> calendar_today </i> Apr 2016 - Mar 2018</span>
-        <h3>Matric</h3>
-        <p>
-          Completed higher senior secondary school education with an aggregate of 94.4%.
-        </p>
-        <p class="university">Kendriya Vidyalaya Gail Vijaipur</p>
+      <div class="about-grid">
+
+        <div class="about-main glass-card reveal">
+
+          <div class="card-icon">
+            <i class="fas fa-laptop-code"></i>
+          </div>
+
+          <h3>Computer Science Engineer</h3>
+
+          <p>
+            I am a Computer Science & Engineering graduate who enjoys turning
+            ideas into functional digital products. My experience spans
+            frontend development, backend development, Java, web technologies,
+            databases, UI/UX and automation.
+          </p>
+
+          <p>
+            I enjoy solving practical problems, learning new technologies and
+            continuously improving the quality of the applications I build.
+          </p>
+
+          <div class="about-tags">
+            <span>Problem Solving</span>
+            <span>Web Development</span>
+            <span>Java</span>
+            <span>UI/UX</span>
+            <span>Backend</span>
+          </div>
+
+        </div>
+
+
+        <div class="stats-grid">
+
+          <div class="stat-box glass-card reveal">
+            <strong>10+</strong>
+            <span>Projects & Applications</span>
+          </div>
+
+          <div class="stat-box glass-card reveal">
+            <strong>8+</strong>
+            <span>Professional Experiences</span>
+          </div>
+
+          <div class="stat-box glass-card reveal">
+            <strong>2024</strong>
+            <span>B.Tech Graduation</span>
+          </div>
+
+          <div class="stat-box glass-card reveal">
+            <strong>2026</strong>
+            <span>M.Sc. AI Begins</span>
+          </div>
+
+        </div>
+
       </div>
 
-      <div class="box">
-        <span><i class="material-icons"> calendar_today </i> Apr 2006 - Mar 2016</span>
-        <h3>Upto class 8</h3>
-        <p>
-          Overall grade : A1
-        </p>
-        <p class="university">SSSVV Gail Vijaipur</p>
-      </div>
-    </div>
+    </section>
 
-    <div class="col">
-      <h2>experience</h2>
-      <div class="box">
-        <span><i class="material-icons"> calendar_today </i> Aug 2022 - Sep 2022</span>
-        <h3>Web developer</h3>
-        <p>
-          Worked on the front-end skills HTML5, CSS.
-        </p>
-        <p class="university">Raise Digital in collaboration with Techniche-IIT Guwahati</p>
+
+    <!-- ================================
+         SKILLS
+    ================================= -->
+
+    <section class="section skills" id="skills">
+
+      <div class="section-heading center reveal">
+        <span>02</span>
+        <p>TECHNICAL SKILLS</p>
+        <h2>Technologies I <strong>work with.</strong></h2>
       </div>
 
-      <div class="box">
-        <span><i class="material-icons"> calendar_today </i> Jan 2022 - Feb 2022</span>
-        <h3>Product and UI/UX designer intern</h3>
-        <p>
-          Worked with Figma creativity tool.
-        </p>
-        <p class="university">Wissenaire, IIT Bhubaneshwar</p>
+
+      <div class="skills-grid">
+
+        <div class="skill-category glass-card reveal">
+
+          <div class="skill-category-title">
+            <i class="fas fa-code"></i>
+            <h3>Programming</h3>
+          </div>
+
+          <div class="skill-list">
+            <span>Java</span>
+            <span>JavaScript</span>
+            <span>Python</span>
+            <span>C++</span>
+            <span>HTML5</span>
+            <span>CSS3</span>
+          </div>
+
+        </div>
+
+
+        <div class="skill-category glass-card reveal">
+
+          <div class="skill-category-title">
+            <i class="fas fa-layer-group"></i>
+            <h3>Frontend</h3>
+          </div>
+
+          <div class="skill-list">
+            <span>React</span>
+            <span>Vite</span>
+            <span>React Router</span>
+            <span>Tailwind CSS</span>
+            <span>Responsive Design</span>
+          </div>
+
+        </div>
+
+
+        <div class="skill-category glass-card reveal">
+
+          <div class="skill-category-title">
+            <i class="fas fa-server"></i>
+            <h3>Backend</h3>
+          </div>
+
+          <div class="skill-list">
+            <span>Spring Boot</span>
+            <span>REST APIs</span>
+            <span>Microservices</span>
+            <span>Node.js</span>
+            <span>JWT</span>
+          </div>
+
+        </div>
+
+
+        <div class="skill-category glass-card reveal">
+
+          <div class="skill-category-title">
+            <i class="fas fa-database"></i>
+            <h3>Database & Tools</h3>
+          </div>
+
+          <div class="skill-list">
+            <span>Oracle</span>
+            <span>PL/SQL</span>
+            <span>MongoDB</span>
+            <span>Git</span>
+            <span>GitHub</span>
+            <span>Postman</span>
+          </div>
+
+        </div>
+
+
+        <div class="skill-category glass-card reveal">
+
+          <div class="skill-category-title">
+            <i class="fas fa-pen-ruler"></i>
+            <h3>Design & Other</h3>
+          </div>
+
+          <div class="skill-list">
+            <span>Figma</span>
+            <span>Adobe XD</span>
+            <span>UI/UX</span>
+            <span>RPA</span>
+            <span>Problem Solving</span>
+          </div>
+
+        </div>
+
       </div>
-    </div>
+
+    </section>
+
+
+    <!-- ================================
+         EXPERIENCE
+    ================================= -->
+
+    <section class="section experience" id="experience">
+
+      <div class="section-heading reveal">
+        <span>03</span>
+        <p>CAREER JOURNEY</p>
+        <h2>Experience that shaped my <strong>career.</strong></h2>
+      </div>
+
+
+      <div class="experience-list">
+
+
+        <!-- 1 -->
+
+        <article class="experience-card glass-card reveal">
+
+          <div class="experience-number">
+            01
+          </div>
+
+          <div class="experience-info">
+
+            <div class="experience-top">
+
+              <div>
+                <span class="experience-type current">
+                  Current
+                </span>
+
+                <h3>Software Engineer Intern</h3>
+
+                <h4>SonicEdge Technologies</h4>
+              </div>
+
+              <span class="experience-date">
+                Jul 2026 – Present
+              </span>
+
+            </div>
+
+            <p class="experience-location">
+              <i class="fas fa-location-dot"></i>
+              On-site · Part-time
+            </p>
+
+            <p>
+              Working as a Software Engineer Intern, contributing to
+              software development activities and gaining practical
+              engineering experience.
+            </p>
+
+          </div>
+
+        </article>
+
+
+        <!-- 2 -->
+
+        <article class="experience-card glass-card reveal">
+
+          <div class="experience-number">
+            02
+          </div>
+
+          <div class="experience-info">
+
+            <div class="experience-top">
+
+              <div>
+                <span class="experience-type current">
+                  Current
+                </span>
+
+                <h3>Freelance Software Engineer</h3>
+
+                <h4>Handshake</h4>
+              </div>
+
+              <span class="experience-date">
+                Jul 2026 – Present
+              </span>
+
+            </div>
+
+            <p class="experience-location">
+              <i class="fas fa-globe"></i>
+              Remote · Part-time
+            </p>
+
+            <p>
+              Working independently on software engineering tasks and
+              development-oriented projects.
+            </p>
+
+          </div>
+
+        </article>
+
+
+        <!-- 3 -->
+
+        <article class="experience-card glass-card reveal">
+
+          <div class="experience-number">
+            03
+          </div>
+
+          <div class="experience-info">
+
+            <div class="experience-top">
+
+              <div>
+                <h3>Backend Validation Officer / Data Entry Operator</h3>
+                <h4>Aerial Telecom Solutions</h4>
+              </div>
+
+              <span class="experience-date">
+                May 2026 – Jul 2026
+              </span>
+
+            </div>
+
+            <p class="experience-location">
+              <i class="fas fa-location-dot"></i>
+              Noida, Uttar Pradesh · On-site · Full-time
+            </p>
+
+            <p>
+              Worked on backend validation and data-entry operations,
+              including DKYC — Digital KYC verification.
+            </p>
+
+          </div>
+
+        </article>
+
+
+        <!-- 4 -->
+
+        <article class="experience-card glass-card reveal">
+
+          <div class="experience-number">
+            04
+          </div>
+
+          <div class="experience-info">
+
+            <div class="experience-top">
+
+              <div>
+                <h3>Freelance</h3>
+                <h4>Upwork</h4>
+              </div>
+
+              <span class="experience-date">
+                May 2023 – Nov 2025
+              </span>
+
+            </div>
+
+            <p class="experience-location">
+              <i class="fas fa-house-laptop"></i>
+              Remote · Freelance
+            </p>
+
+            <p>
+              Worked independently on freelance opportunities and
+              technology-related assignments.
+            </p>
+
+          </div>
+
+        </article>
+
+
+        <!-- 5 -->
+
+        <article class="experience-card glass-card reveal">
+
+          <div class="experience-number">
+            05
+          </div>
+
+          <div class="experience-info">
+
+            <div class="experience-top">
+
+              <div>
+                <h3>Full Stack Web Developer Intern</h3>
+                <h4>Bharat Intern</h4>
+              </div>
+
+              <span class="experience-date">
+                Jan 2024 – Mar 2025
+              </span>
+
+            </div>
+
+            <p class="experience-location">
+              <i class="fas fa-house-laptop"></i>
+              Remote · Internship
+            </p>
+
+            <p>
+              Worked on assigned full-stack development tasks and built
+              applications including an expense tracker and forms using
+              HTML, CSS, JavaScript, Node.js and MongoDB.
+            </p>
+
+            <div class="experience-skills">
+              <span>HTML</span>
+              <span>CSS</span>
+              <span>JavaScript</span>
+              <span>Node.js</span>
+              <span>MongoDB</span>
+            </div>
+
+          </div>
+
+        </article>
+
+
+        <!-- 6 -->
+
+        <article class="experience-card glass-card reveal">
+
+          <div class="experience-number">
+            06
+          </div>
+
+          <div class="experience-info">
+
+            <div class="experience-top">
+
+              <div>
+                <h3>Full Stack Web Development Intern</h3>
+                <h4>Hackveda</h4>
+              </div>
+
+              <span class="experience-date">
+                Jan 2024 – Apr 2024
+              </span>
+
+            </div>
+
+            <p class="experience-location">
+              <i class="fas fa-house-laptop"></i>
+              Remote · Internship
+            </p>
+
+            <p>
+              Completed a college semester internship and worked on a
+              fintech project using Adalo.
+            </p>
+
+          </div>
+
+        </article>
+
+
+        <!-- 7 -->
+
+        <article class="experience-card glass-card reveal">
+
+          <div class="experience-number">
+            07
+          </div>
+
+          <div class="experience-info">
+
+            <div class="experience-top">
+
+              <div>
+                <h3>Robotics Process Automation Intern</h3>
+                <h4>SS&C Blue Prism</h4>
+              </div>
+
+              <span class="experience-date">
+                May 2023 – Jul 2023
+              </span>
+
+            </div>
+
+            <p class="experience-location">
+              <i class="fas fa-building"></i>
+              Internship · AICTE & EduSkills Foundation
+            </p>
+
+            <p>
+              Worked as an Associate Developer in a Robotics Process
+              Automation internship. Developed problem-solving,
+              planning, sequencing and automation-oriented skills.
+            </p>
+
+            <div class="experience-skills">
+              <span>RPA</span>
+              <span>Problem Solving</span>
+              <span>Planning</span>
+              <span>Sequencing</span>
+            </div>
+
+          </div>
+
+        </article>
+
+
+        <!-- 8 -->
+
+        <article class="experience-card glass-card reveal">
+
+          <div class="experience-number">
+            08
+          </div>
+
+          <div class="experience-info">
+
+            <div class="experience-top">
+
+              <div>
+                <h3>Digital Marketing Intern</h3>
+                <h4>Mood Indigo, IIT Bombay</h4>
+              </div>
+
+              <span class="experience-date">
+                Aug 2022 – Jan 2023
+              </span>
+
+            </div>
+
+            <p class="experience-location">
+              <i class="fas fa-globe"></i>
+              Remote · Internship
+            </p>
+
+            <p>
+              Worked as part of the digital marketing team and contributed
+              to promotional and digital activities.
+            </p>
+
+          </div>
+
+        </article>
+
+
+        <!-- 9 -->
+
+        <article class="experience-card glass-card reveal">
+
+          <div class="experience-number">
+            09
+          </div>
+
+          <div class="experience-info">
+
+            <div class="experience-top">
+
+              <div>
+                <h3>Web Development Intern</h3>
+                <h4>1Stop.ai</h4>
+              </div>
+
+              <span class="experience-date">
+                Aug 2022 – Sep 2022
+              </span>
+
+            </div>
+
+            <p class="experience-location">
+              <i class="fas fa-globe"></i>
+              Remote · Internship
+            </p>
+
+            <p>
+              Worked on a job portal dashboard using server-side packages
+              and scripting technologies. The internship was associated
+              with Raise Digital and Techniche, IIT Guwahati.
+            </p>
+
+            <div class="experience-skills">
+              <span>Frontend Development</span>
+              <span>Server-side Programming</span>
+              <span>Web Development</span>
+            </div>
+
+          </div>
+
+        </article>
+
+
+        <!-- 10 -->
+
+        <article class="experience-card glass-card reveal">
+
+          <div class="experience-number">
+            10
+          </div>
+
+          <div class="experience-info">
+
+            <div class="experience-top">
+
+              <div>
+                <h3>Product & UI/UX Designer</h3>
+                <h4>Wissenaire, IIT Bhubaneswar</h4>
+              </div>
+
+              <span class="experience-date">
+                Jan 2022 – Feb 2022
+              </span>
+
+            </div>
+
+            <p class="experience-location">
+              <i class="fas fa-globe"></i>
+              Remote · Internship
+            </p>
+
+            <p>
+              Worked on product and UI/UX design activities using
+              design and prototyping tools.
+            </p>
+
+            <div class="experience-skills">
+              <span>Figma</span>
+              <span>Adobe XD</span>
+              <span>UI/UX</span>
+            </div>
+
+          </div>
+
+        </article>
+
+
+      </div>
+
+    </section>
+
+
+    <!-- ================================
+         EDUCATION
+    ================================= -->
+
+    <section class="section education" id="education">
+
+      <div class="section-heading center reveal">
+        <span>04</span>
+        <p>EDUCATION</p>
+        <h2>My <strong>academic journey.</strong></h2>
+      </div>
+
+
+      <div class="education-grid">
+
+
+        <article class="education-card featured glass-card reveal">
+
+          <div class="education-icon">
+            <i class="fas fa-brain"></i>
+          </div>
+
+          <span class="education-status">
+            Currently Pursuing
+          </span>
+
+          <h3>Master of Science</h3>
+
+          <h4>Artificial Intelligence</h4>
+
+          <p class="education-institute">
+            Indira Gandhi National Open University (IGNOU), Delhi
+          </p>
+
+          <span class="education-date">
+            Aug 2026 – 2028
+          </span>
+
+        </article>
+
+
+        <article class="education-card glass-card reveal">
+
+          <div class="education-icon">
+            <i class="fas fa-graduation-cap"></i>
+          </div>
+
+          <h3>B.Tech</h3>
+
+          <h4>Computer Science & Engineering</h4>
+
+          <p class="education-institute">
+            SRM Institute of Science and Technology (SRMIST)
+          </p>
+
+          <span class="education-date">
+            Sep 2020 – Oct 2024
+          </span>
+
+          <div class="education-grade">
+            <strong>I Class</strong>
+          </div>
+
+          <p class="education-note">
+            Former member of SRM ISTE NCR, 2021–2023.
+          </p>
+
+        </article>
+
+
+        <article class="education-card glass-card reveal">
+
+          <div class="education-icon">
+            <i class="fas fa-school"></i>
+          </div>
+
+          <h3>Intermediate</h3>
+
+          <h4>Class XI & XII — Science Stream</h4>
+
+          <p class="education-institute">
+            Shiv Jyoti International School
+          </p>
+
+          <span class="education-date">
+            Apr 2018 – Mar 2020
+          </span>
+
+          <div class="education-grade">
+            <strong>89%</strong>
+          </div>
+
+        </article>
+
+
+        <article class="education-card glass-card reveal">
+
+          <div class="education-icon">
+            <i class="fas fa-book-open"></i>
+          </div>
+
+          <h3>Matriculation</h3>
+
+          <h4>Class IX & X</h4>
+
+          <p class="education-institute">
+            Kendriya Vidyalaya (KV)
+          </p>
+
+          <span class="education-date">
+            Apr 2016 – Apr 2018
+          </span>
+
+          <div class="education-grade">
+            <strong>94%</strong>
+          </div>
+
+          <p class="education-note">
+            KVS National Level Participant and Regional Level Table Tennis
+            Player. Former House Prefect of Tagore House.
+          </p>
+
+        </article>
+
+
+        <article class="education-card glass-card reveal">
+
+          <div class="education-icon">
+            <i class="fas fa-child"></i>
+          </div>
+
+          <h3>Primary Education</h3>
+
+          <h4>Basic School Education</h4>
+
+          <p class="education-institute">
+            Sri Sathya Sai Vidya Vihar High School
+          </p>
+
+          <span class="education-date">
+            Apr 2006 – Apr 2016
+          </span>
+
+          <div class="education-grade">
+            <strong>A1</strong>
+          </div>
+
+          <p class="education-note">
+            Active member of Sahyadri House and participant in quizzes,
+            laboratory activities and co-curricular events.
+          </p>
+
+        </article>
+
+      </div>
+
+    </section>
+
+
+    <!-- ================================
+         PROJECTS
+    ================================= -->
+
+    <section class="section projects" id="portfolio">
+
+      <div class="section-heading reveal">
+        <span>05</span>
+        <p>SELECTED WORK</p>
+        <h2>Projects I've <strong>built.</strong></h2>
+      </div>
+
+
+      <div class="project-grid">
+
+
+        <article class="project-card glass-card reveal">
+
+          <div class="project-image project-jkm">
+
+            <div class="project-image-icon">
+              <i class="fas fa-guitar"></i>
+            </div>
+
+            <span>E-Commerce</span>
+
+          </div>
+
+          <div class="project-body">
+
+            <h3>JK Musicals E-Commerce</h3>
+
+            <p>
+              A full-stack musical instrument e-commerce platform featuring
+              product browsing, cart, wishlist, checkout, authentication,
+              order management and payment integration.
+            </p>
+
+            <div class="project-tech">
+              <span>React</span>
+              <span>Spring Boot</span>
+              <span>Java</span>
+              <span>Oracle</span>
+            </div>
+
+          </div>
+
+        </article>
+
+
+        <article class="project-card glass-card reveal">
+
+          <div class="project-image project-code">
+
+            <div class="project-image-icon">
+              <i class="fas fa-futbol"></i>
+            </div>
+
+            <span>Web Application</span>
+
+          </div>
+
+          <div class="project-body">
+
+            <h3>Code-O-Soccer</h3>
+
+            <p>
+              Interactive football-themed coding platform designed to
+              combine programming activities with a sports-inspired
+              interface.
+            </p>
+
+            <div class="project-tech">
+              <span>HTML</span>
+              <span>CSS</span>
+              <span>JavaScript</span>
+            </div>
+
+          </div>
+
+        </article>
+
+
+        <article class="project-card glass-card reveal">
+
+          <div class="project-image project-roster">
+
+            <div class="project-image-icon">
+              <i class="fas fa-users"></i>
+            </div>
+
+            <span>Management System</span>
+
+          </div>
+
+          <div class="project-body">
+
+            <h3>RosterNotar</h3>
+
+            <p>
+              Smart roster and attendance management concept focused on
+              simplifying employee or team scheduling and attendance
+              operations.
+            </p>
+
+            <div class="project-tech">
+              <span>Web</span>
+              <span>Database</span>
+              <span>Management</span>
+            </div>
+
+          </div>
+
+        </article>
+
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================================================
+     CERTIFICATIONS
+========================================================= -->
+<section class="certifications section" id="certificates">
+
+  <div class="section-title">
+    <span class="section-kicker">ACHIEVEMENTS & CREDENTIALS</span>
+    <h2>Certifications</h2>
+    <p>
+      Professional certifications, technical training, job simulations,
+      academic achievements and verified credentials.
+    </p>
   </div>
-</section>
-<!-- resume section ends -->
-<!-- about section starts -->
 
-      <a href="#" class="btn">hire me</a>
-      <a href="#" class="btn">download cv</a>
+  <!-- Certification Controls -->
+  <div class="certification-controls">
+
+    <div class="cert-search">
+      <i class="fas fa-search"></i>
+      <input
+        type="text"
+        id="certSearch"
+        placeholder="Search certifications, skills or organizations..."
+        aria-label="Search certifications"
+      />
     </div>
+
+    <div class="cert-filters" id="certFilters">
+      <button class="cert-filter active" data-filter="all">
+        All
+      </button>
+
+      <button class="cert-filter" data-filter="java">
+        Java & Backend
+      </button>
+
+      <button class="cert-filter" data-filter="web">
+        Web Development
+      </button>
+
+      <button class="cert-filter" data-filter="simulation">
+        Job Simulations
+      </button>
+
+      <button class="cert-filter" data-filter="management">
+        Management
+      </button>
+
+      <button class="cert-filter" data-filter="other">
+        Other
+      </button>
+    </div>
+
   </div>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-example" crossorigin="anonymous" />
-  <a href="https://in.linkedin.com/in/ifraah-tabassum-006618144/" target="_blank" rel="noopener noreferrer">
-    <i class="fab fa-linkedin fa-2x">Ifraah Tabassum</i> <!-- Adjust size (fa-2x, fa-3x, etc.) as needed -->
-</a>
+
+  <!-- Certification Grid -->
+  <div class="certification-grid" id="certificationGrid">
+
+    <!-- 01 -->
+    <article
+      class="cert-card"
+      data-category="other"
+      data-search="Google Prompt Wars Google for Developers appreciation"
+    >
+      <div class="cert-icon google-icon">
+        <i class="fab fa-google"></i>
+      </div>
+
+      <div class="cert-card-body">
+
+        <span class="cert-badge">2026</span>
+
+        <h3>Certificate of Appreciation by Google Prompt Wars</h3>
+
+        <p class="cert-issuer">
+          <i class="fas fa-building"></i>
+          Google for Developers
+        </p>
+
+        <p class="cert-date">
+          <i class="far fa-calendar"></i>
+          Issued Aug 2026
+        </p>
+
+        <p class="credential">
+          Credential ID:
+          <strong>2026H2S06PWVCHL3-A01250</strong>
+        </p>
+
+        <div class="cert-actions">
+          <a
+            href="https://certificate.hack2skill.com/verify/2026H2S06PWVCHL3-A01250"
+            target="_blank"
+            class="cert-btn primary"
+          >
+            <i class="fas fa-external-link-alt"></i>
+            Verify Credential
+          </a>
+        </div>
+
+      </div>
+    </article>
+
+
+    <!-- 02 -->
+    <article
+      class="cert-card"
+      data-category="java"
+      data-search="Full Stack Java Training NareshIT Java Spring Framework"
+    >
+      <div class="cert-icon java-icon">
+        <i class="fab fa-java"></i>
+      </div>
+
+      <div class="cert-card-body">
+
+        <span class="cert-badge">2026</span>
+
+        <h3>Full Stack Java Training</h3>
+
+        <p class="cert-issuer">
+          <i class="fas fa-building"></i>
+          NareshIT
+        </p>
+
+        <p class="cert-date">
+          <i class="far fa-calendar"></i>
+          Issued Jul 2026
+        </p>
+
+        <div class="skill-tags">
+          <span>Full Stack Java</span>
+          <span>Spring Framework</span>
+          <span>Backend</span>
+          <span>+2 skills</span>
+        </div>
+
+        <div class="cert-actions">
+          <a
+            href="https://drive.google.com/file/d/1PtOiu--Y9Lrg1tQMQTit7UREJIXZN5ps/view?usp=sharing"
+            target="_blank"
+            class="cert-btn primary"
+          >
+            <i class="fas fa-certificate"></i>
+            View Certificate
+          </a>
+        </div>
+
+      </div>
+    </article>
+
+
+    <!-- 03 -->
+    <article
+      class="cert-card"
+      data-category="other"
+      data-search="TCS ion Cognitive TCS iON"
+    >
+      <div class="cert-icon tcs-icon">
+        <i class="fas fa-brain"></i>
+      </div>
+
+      <div class="cert-card-body">
+
+        <span class="cert-badge">2026</span>
+
+        <h3>TCS iON Cognitive</h3>
+
+        <p class="cert-issuer">
+          <i class="fas fa-building"></i>
+          TCS iON
+        </p>
+
+        <p class="cert-date">
+          <i class="far fa-calendar"></i>
+          Issued Jan 2026 · Expires Jan 2028
+        </p>
+
+        <div class="cert-actions">
+          <a
+            href="https://drive.google.com/file/d/1qtBYiAGUXOAL6Tq-7uuhMVnNRBiXb42k/view?usp=drivesdk"
+            target="_blank"
+            class="cert-btn primary"
+          >
+            <i class="fas fa-external-link-alt"></i>
+            View Credential
+          </a>
+        </div>
+
+      </div>
+    </article>
+
+
+    <!-- 04 -->
+    <article
+      class="cert-card"
+      data-category="simulation"
+      data-search="Hewlett Packard Enterprise Software Engineering Job Simulation Forage Java Software Development"
+    >
+      <div class="cert-icon forage-icon">
+        <i class="fas fa-laptop-code"></i>
+      </div>
+
+      <div class="cert-card-body">
+
+        <span class="cert-badge">2025</span>
+
+        <h3>
+          Hewlett Packard Enterprise –
+          Software Engineering Job Simulation
+        </h3>
+
+        <p class="cert-issuer">
+          <i class="fas fa-building"></i>
+          Forage
+        </p>
+
+        <p class="cert-date">
+          <i class="far fa-calendar"></i>
+          Issued Nov 2025
+        </p>
+
+        <p class="credential">
+          Credential ID:
+          <strong>bdDCSKoDZLpzv4m35</strong>
+        </p>
+
+        <div class="skill-tags">
+          <span>Java</span>
+          <span>Software Development</span>
+          <span>+3 skills</span>
+        </div>
+
+        <div class="cert-actions">
+          <a
+            href="https://www.theforage.com/"
+            target="_blank"
+            class="cert-btn primary"
+          >
+            <i class="fas fa-external-link-alt"></i>
+            View Credential
+          </a>
+        </div>
+
+      </div>
+    </article>
+
+
+    <!-- 05 -->
+    <article
+      class="cert-card"
+      data-category="simulation"
+      data-search="Tata GenAI Powered Data Analytics Job Simulation Forage"
+    >
+      <div class="cert-icon tata-icon">
+        <i class="fas fa-chart-line"></i>
+      </div>
+
+      <div class="cert-card-body">
+
+        <span class="cert-badge">2025</span>
+
+        <h3>Tata – GenAI Powered Data Analytics Job Simulation</h3>
+
+        <p class="cert-issuer">
+          <i class="fas fa-building"></i>
+          Tata Forage
+        </p>
+
+        <p class="cert-date">
+          <i class="far fa-calendar"></i>
+          Issued Nov 2025
+        </p>
+
+        <p class="credential">
+          Credential ID:
+          <strong>BnF3XerkP2vptoJBA</strong>
+        </p>
+
+        <div class="cert-actions">
+          <a
+            href="https://www.theforage.com/"
+            target="_blank"
+            class="cert-btn primary"
+          >
+            <i class="fas fa-external-link-alt"></i>
+            View Credential
+          </a>
+        </div>
+
+      </div>
+    </article>
+
+
+    <!-- 06 -->
+    <article
+      class="cert-card"
+      data-category="other"
+      data-search="Certificate Participation Knowledge Institute Technology KIOT coding rapid fire"
+    >
+      <div class="cert-icon">
+        <i class="fas fa-award"></i>
+      </div>
+
+      <div class="cert-card-body">
+
+        <span class="cert-badge">2025</span>
+
+        <h3>Certificate of Participation</h3>
+
+        <p class="cert-issuer">
+          <i class="fas fa-building"></i>
+          Knowledge Institute of Technology (KIOT)
+        </p>
+
+        <p class="cert-date">
+          <i class="far fa-calendar"></i>
+          Issued Oct 2025
+        </p>
+
+        <p class="cert-description">
+          Completed all three rounds through Unstop:
+          Preliminary – 10th rank, Coding – 9th rank,
+          and Rapid Fire Round, among 87 registered candidates.
+        </p>
+
+        <div class="cert-actions">
+          <a
+            href="#"
+            class="cert-btn secondary"
+            data-no-link="true"
+          >
+            <i class="fas fa-image"></i>
+            Certificate Available
+          </a>
+        </div>
+
+      </div>
+    </article>
+
+
+    <!-- 07 -->
+    <article
+      class="cert-card"
+      data-category="web"
+      data-search="ReactJS Completion Certificate Naresh i Technologies React"
+    >
+      <div class="cert-icon react-icon">
+        <i class="fab fa-react"></i>
+      </div>
+
+      <div class="cert-card-body">
+
+        <span class="cert-badge">2022</span>
+
+        <h3>ReactJS Completion Certificate</h3>
+
+        <p class="cert-issuer">
+          <i class="fas fa-building"></i>
+          Naresh i Technologies
+        </p>
+
+        <p class="cert-date">
+          <i class="far fa-calendar"></i>
+          Issued Nov 2022
+        </p>
+
+        <div class="skill-tags">
+          <span>React.js</span>
+        </div>
+
+        <div class="cert-actions">
+          <a
+            href="https://drive.google.com/file/d/1Zn6nLxCKXiEMSf5vPvsZ8sfGggXKx-To/view?usp=sharing"
+            target="_blank"
+            class="cert-btn primary"
+          >
+            <i class="fas fa-certificate"></i>
+            View Certificate
+          </a>
+        </div>
+
+      </div>
+    </article>
+
+
+    <!-- 08 -->
+    <article
+      class="cert-card"
+      data-category="other"
+      data-search="Problem Solving Basic HackerRank"
+    >
+      <div class="cert-icon hackerrank-icon">
+        <i class="fas fa-code"></i>
+      </div>
+
+      <div class="cert-card-body">
+
+        <span class="cert-badge">2022</span>
+
+        <h3>Problem Solving (Basic)</h3>
+
+        <p class="cert-issuer">
+          <i class="fas fa-building"></i>
+          HackerRank
+        </p>
+
+        <p class="cert-date">
+          <i class="far fa-calendar"></i>
+          Issued Jun 2022
+        </p>
+
+        <p class="credential">
+          Credential ID:
+          <strong>5EB85F3E291C</strong>
+        </p>
+
+        <div class="skill-tags">
+          <span>Problem Solving</span>
+        </div>
+
+        <div class="cert-actions">
+          <a
+            href="https://www.hackerrank.com/certificates/iframe/5eb85f3e291c"
+            target="_blank"
+            class="cert-btn primary"
+          >
+            <i class="fas fa-check-circle"></i>
+            Verify Credential
+          </a>
+        </div>
+
+      </div>
+    </article>
+
+
+    <!-- 09 -->
+    <article
+      class="cert-card"
+      data-category="web"
+      data-search="Web Development Fundamentals IBM"
+    >
+      <div class="cert-icon ibm-icon">
+        <i class="fas fa-globe"></i>
+      </div>
+
+      <div class="cert-card-body">
+
+        <span class="cert-badge">2025</span>
+
+        <h3>Web Development Fundamentals</h3>
+
+        <p class="cert-issuer">
+          <i class="fas fa-building"></i>
+          IBM
+        </p>
+
+        <p class="cert-date">
+          <i class="far fa-calendar"></i>
+          Issued Oct 2025
+        </p>
+
+        <div class="cert-actions">
+          <a
+            href="https://www.credly.com/badges/009f9dfd-2a15-444b-acfb-64a767e79f08/linked_in_profile"
+            target="_blank"
+            class="cert-btn primary"
+          >
+            <i class="fas fa-external-link-alt"></i>
+            View Credential
+          </a>
+        </div>
+
+      </div>
+    </article>
+
+
+    <!-- 10 -->
+    <article
+      class="cert-card"
+      data-category="management"
+      data-search="Project Initiation Starting Successful Project Google Coursera"
+    >
+      <div class="cert-icon google-icon">
+        <i class="fab fa-google"></i>
+      </div>
+
+      <div class="cert-card-body">
+
+        <span class="cert-badge">2025</span>
+
+        <h3>Project Initiation: Starting a Successful Project</h3>
+
+        <p class="cert-issuer">
+          <i class="fas fa-building"></i>
+          Google
+        </p>
+
+        <p class="cert-date">
+          <i class="far fa-calendar"></i>
+          Issued Jul 2025
+        </p>
+
+        <p class="credential">
+          Credential ID:
+          <strong>BQIZDP03NQ6B</strong>
+        </p>
+
+        <div class="cert-actions">
+          <a
+            href="https://www.coursera.org/account/accomplishments/records/BQIZDP03NQ6B"
+            target="_blank"
+            class="cert-btn primary"
+          >
+            <i class="fas fa-external-link-alt"></i>
+            Verify Credential
+          </a>
+        </div>
+
+      </div>
+    </article>
+
+
+    <!-- 11 -->
+    <article
+      class="cert-card"
+      data-category="other"
+      data-search="TCS iON Career Edge IT for Non IT"
+    >
+      <div class="cert-icon tcs-icon">
+        <i class="fas fa-building"></i>
+      </div>
+
+      <div class="cert-card-body">
+
+        <span class="cert-badge">2025</span>
+
+        <h3>TCS iON Career Edge – IT for Non-IT</h3>
+
+        <p class="cert-issuer">
+          <i class="fas fa-building"></i>
+          TCS iON
+        </p>
+
+        <p class="cert-date">
+          <i class="far fa-calendar"></i>
+          Issued Mar 2025
+        </p>
+
+        <p class="credential">
+          Credential ID:
+          <strong>8739-26425597-1016</strong>
+        </p>
+
+        <div class="cert-actions">
+          <a
+            href="https://drive.google.com/file/d/1nZbtaEaWqhfmzdg4L1Bwgldlo7QA6snM/view?usp=drivesdk"
+            target="_blank"
+            class="cert-btn primary"
+          >
+            <i class="fas fa-file-pdf"></i>
+            View Certificate
+          </a>
+        </div>
+
+      </div>
+    </article>
+
+
+    <!-- 12 -->
+    <article
+      class="cert-card"
+      data-category="java"
+      data-search="Hibernate Framework Basics Infosys Springboard Hibernate"
+    >
+      <div class="cert-icon java-icon">
+        <i class="fas fa-database"></i>
+      </div>
+
+      <div class="cert-card-body">
+
+        <span class="cert-badge">2024</span>
+
+        <h3>Hibernate Framework – Basics</h3>
+
+        <p class="cert-issuer">
+          <i class="fas fa-building"></i>
+          Infosys Springboard
+        </p>
+
+        <p class="cert-date">
+          <i class="far fa-calendar"></i>
+          Issued Dec 2024
+        </p>
+
+        <div class="skill-tags">
+          <span>Hibernate</span>
+        </div>
+
+        <div class="cert-actions">
+          <a
+            href="https://drive.google.com/file/d/1-rIlygd4_Im3T6o9MEH8zmQM5NYSeWCk/view?usp=drivesdk"
+            target="_blank"
+            class="cert-btn primary"
+          >
+            <i class="fas fa-external-link-alt"></i>
+            View Credential
+          </a>
+        </div>
+
+      </div>
+    </article>
+
+
+    <!-- 13 -->
+    <article
+      class="cert-card"
+      data-category="other"
+      data-search="Discrete Structures NPTEL"
+    >
+      <div class="cert-icon nptel-icon">
+        <i class="fas fa-network-wired"></i>
+      </div>
+
+      <div class="cert-card-body">
+
+        <span class="cert-badge">2023</span>
+
+        <h3>Discrete Structures</h3>
+
+        <p class="cert-issuer">
+          <i class="fas fa-building"></i>
+          NPTEL
+        </p>
+
+        <p class="cert-date">
+          <i class="far fa-calendar"></i>
+          Issued May 2023
+        </p>
+
+        <p class="credential">
+          Credential ID:
+          <strong>NPTEL23CS60S43442426</strong>
+        </p>
+
+        <div class="cert-actions">
+          <a
+            href="https://archive.nptel.ac.in/content/noc/NOC23/SEM1/Ecertificates/106/noc23-cs60/Course/NPTEL23CS60S4344242604136383.jpg"
+            target="_blank"
+            class="cert-btn primary"
+          >
+            <i class="fas fa-certificate"></i>
+            View Credential
+          </a>
+        </div>
+
+      </div>
+    </article>
+
+
+    <!-- 14 -->
+    <article
+      class="cert-card"
+      data-category="other"
+      data-search="Hackveda Certified Professional SQL Interview Quiz SQL"
+    >
+      <div class="cert-icon sql-icon">
+        <i class="fas fa-database"></i>
+      </div>
+
+      <div class="cert-card-body">
+
+        <span class="cert-badge">2024</span>
+
+        <h3>Hackveda Certified Professional – SQL Interview Quiz</h3>
+
+        <p class="cert-issuer">
+          <i class="fas fa-building"></i>
+          Hackveda
+        </p>
+
+        <p class="cert-date">
+          <i class="far fa-calendar"></i>
+          Issued Jan 2024
+        </p>
+
+        <p class="credential">
+          Credential ID:
+          <strong>27/3524/2024</strong>
+        </p>
+
+        <div class="skill-tags">
+          <span>SQL</span>
+        </div>
+
+      </div>
+    </article>
+
+
+    <!-- 15 -->
+    <article
+      class="cert-card"
+      data-category="simulation"
+      data-search="Goldman Sachs Software Engineering Job Simulation Forage"
+    >
+      <div class="cert-icon goldman-icon">
+        <i class="fas fa-chart-bar"></i>
+      </div>
+
+      <div class="cert-card-body">
+
+        <span class="cert-badge">2023</span>
+
+        <h3>Goldman Sachs – Software Engineering Job Simulation</h3>
+
+        <p class="cert-issuer">
+          <i class="fas fa-building"></i>
+          Forage
+        </p>
+
+        <p class="cert-date">
+          <i class="far fa-calendar"></i>
+          Issued Dec 2023
+        </p>
+
+        <p class="credential">
+          Credential ID:
+          <strong>9qCqDNTuNdyRSmsH8</strong>
+        </p>
+
+        <div class="skill-tags">
+          <span>Software Development</span>
+        </div>
+
+        <div class="cert-actions">
+          <a
+            href="https://www.theforage.com/"
+            target="_blank"
+            class="cert-btn primary"
+          >
+            <i class="fas fa-external-link-alt"></i>
+            View Credential
+          </a>
+        </div>
+
+      </div>
+    </article>
+
+
+    <!-- 16 -->
+    <article
+      class="cert-card"
+      data-category="simulation"
+      data-search="JPMorgan Chase Excel Skills Job Simulation Forage Microsoft Excel"
+    >
+      <div class="cert-icon jp-icon">
+        <i class="fas fa-file-excel"></i>
+      </div>
+
+      <div class="cert-card-body">
+
+        <span class="cert-badge">2023</span>
+
+        <h3>JPMorgan Chase & Co. – Excel Skills Job Simulation</h3>
+
+        <p class="cert-issuer">
+          <i class="fas fa-building"></i>
+          Forage
+        </p>
+
+        <p class="cert-date">
+          <i class="far fa-calendar"></i>
+          Issued Dec 2023
+        </p>
+
+        <p class="credential">
+          Credential ID:
+          <strong>apEb69R8ammdMh79b</strong>
+        </p>
+
+        <div class="skill-tags">
+          <span>Microsoft Excel</span>
+        </div>
+
+        <div class="cert-actions">
+          <a
+            href="https://www.theforage.com/"
+            target="_blank"
+            class="cert-btn primary"
+          >
+            <i class="fas fa-external-link-alt"></i>
+            View Credential
+          </a>
+        </div>
+
+      </div>
+    </article>
+
+
+    <!-- 17 -->
+    <article
+      class="cert-card"
+      data-category="java"
+      data-search="Essentials of Java National Career Service Java"
+    >
+      <div class="cert-icon java-icon">
+        <i class="fab fa-java"></i>
+      </div>
+
+      <div class="cert-card-body">
+
+        <span class="cert-badge">2023</span>
+
+        <h3>Essentials of Java</h3>
+
+        <p class="cert-issuer">
+          <i class="fas fa-building"></i>
+          National Career Service
+        </p>
+
+        <p class="cert-date">
+          <i class="far fa-calendar"></i>
+          Issued Jun 2023
+        </p>
+
+        <div class="skill-tags">
+          <span>Java</span>
+        </div>
+
+        <div class="cert-actions">
+          <a
+            href="https://drive.google.com/file/d/1ODnPxBoGiodPOBrgNVI3XG3EyNeABTr5/view?usp=sharing"
+            target="_blank"
+            class="cert-btn primary"
+          >
+            <i class="fas fa-certificate"></i>
+            View Credential
+          </a>
+        </div>
+
+      </div>
+    </article>
+
+
+    <!-- 18 -->
+    <article
+      class="cert-card"
+      data-category="other"
+      data-search="Face Recognition Application Python HCL GUVI"
+    >
+      <div class="cert-icon python-icon">
+        <i class="fab fa-python"></i>
+      </div>
+
+      <div class="cert-card-body">
+
+        <span class="cert-badge">2023</span>
+
+        <h3>Build a Face Recognition Application using Python</h3>
+
+        <p class="cert-issuer">
+          <i class="fas fa-building"></i>
+          HCL GUVI
+        </p>
+
+        <p class="cert-date">
+          <i class="far fa-calendar"></i>
+          Issued Apr 2023
+        </p>
+
+        <p class="credential">
+          Credential ID:
+          <strong>889V85gP8605pG71W7</strong>
+        </p>
+
+        <div class="cert-actions">
+          <a
+            href="https://www.guvi.in/verify-certificate?id=889V85gP8605pG71W7&course=aiforindiaenglishhandson"
+            target="_blank"
+            class="cert-btn primary"
+          >
+            <i class="fas fa-check-circle"></i>
+            Verify Credential
+          </a>
+        </div>
+
+      </div>
+    </article>
+
+
+    <!-- 19 -->
+    <article
+      class="cert-card"
+      data-category="java"
+      data-search="Oracle Java Certification Data Types LinkedIn"
+    >
+      <div class="cert-icon oracle-icon">
+        <i class="fas fa-database"></i>
+      </div>
+
+      <div class="cert-card-body">
+
+        <span class="cert-badge">2022</span>
+
+        <h3>Oracle Java Certification: 1. Data Types</h3>
+
+        <p class="cert-issuer">
+          <i class="fab fa-linkedin"></i>
+          LinkedIn
+        </p>
+
+        <p class="cert-date">
+          <i class="far fa-calendar"></i>
+          Issued Nov 2022
+        </p>
+
+        <div class="cert-actions">
+          <a
+            href="https://www.linkedin.com/learning/certificates/9f1077fff979cc9db0516acbc0248b4a1f808ca922726b7b4eca4e9bc8811964/"
+            target="_blank"
+            class="cert-btn primary"
+          >
+            <i class="fas fa-external-link-alt"></i>
+            View Credential
+          </a>
+        </div>
+
+      </div>
+    </article>
+
+
+    <!-- 20 -->
+    <article
+      class="cert-card"
+      data-category="java"
+      data-search="Core Java Naresh i Technologies"
+    >
+      <div class="cert-icon java-icon">
+        <i class="fab fa-java"></i>
+      </div>
+
+      <div class="cert-card-body">
+
+        <span class="cert-badge">Java</span>
+
+        <h3>Core Java</h3>
+
+        <p class="cert-issuer">
+          <i class="fas fa-building"></i>
+          Naresh i Technologies
+        </p>
+
+        <div class="cert-actions">
+          <a
+            href="https://drive.google.com/file/d/1DW7g6plTSVrcN7MF1mcQbqkTnS8UouSY/view?usp=sharing"
+            target="_blank"
+            class="cert-btn primary"
+          >
+            <i class="fas fa-certificate"></i>
+            View Credential
+          </a>
+        </div>
+
+      </div>
+    </article>
+
+
+    <!-- 21 -->
+    <article
+      class="cert-card"
+      data-category="java"
+      data-search="Advanced Java Naresh i Technologies JDBC"
+    >
+      <div class="cert-icon java-icon">
+        <i class="fab fa-java"></i>
+      </div>
+
+      <div class="cert-card-body">
+
+        <span class="cert-badge">2021</span>
+
+        <h3>Advanced Java</h3>
+
+        <p class="cert-issuer">
+          <i class="fas fa-building"></i>
+          Naresh i Technologies
+        </p>
+
+        <p class="cert-date">
+          <i class="far fa-calendar"></i>
+          Issued Jul 2021
+        </p>
+
+        <div class="skill-tags">
+          <span>JDBC</span>
+        </div>
+
+        <div class="cert-actions">
+          <a
+            href="https://drive.google.com/file/d/1OucRcorJc8UI8ziRXO2K2i_yAXwKFckA/view?usp=sharing"
+            target="_blank"
+            class="cert-btn primary"
+          >
+            <i class="fas fa-certificate"></i>
+            View Credential
+          </a>
+        </div>
+
+      </div>
+    </article>
+
+
+    <!-- 22 -->
+    <article
+      class="cert-card"
+      data-category="web"
+      data-search="Certificate Project Completion 1Stop.ai Web Development"
+    >
+      <div class="cert-icon">
+        <i class="fas fa-globe"></i>
+      </div>
+
+      <div class="cert-card-body">
+
+        <span class="cert-badge">2022</span>
+
+        <h3>Certificate of Project Completion</h3>
+
+        <p class="cert-issuer">
+          <i class="fas fa-building"></i>
+          1Stop.ai
+        </p>
+
+        <p class="cert-date">
+          <i class="far fa-calendar"></i>
+          Issued Aug 2022
+        </p>
+
+        <div class="cert-actions">
+          <a
+            href="https://drive.google.com/file/d/1FbSJvBDdl-gYtMmQx_bd8EAYZnjw1Aw3/view?usp=sharing"
+            target="_blank"
+            class="cert-btn primary"
+          >
+            <i class="fas fa-certificate"></i>
+            View Credential
+          </a>
+        </div>
+
+      </div>
+    </article>
+
+
+    <!-- 23 -->
+    <article
+      class="cert-card"
+      data-category="management"
+      data-search="Foundations Project Management Grow with Google Coursera"
+    >
+      <div class="cert-icon google-icon">
+        <i class="fab fa-google"></i>
+      </div>
+
+      <div class="cert-card-body">
+
+        <span class="cert-badge">2022</span>
+
+        <h3>Foundations of Project Management</h3>
+
+        <p class="cert-issuer">
+          <i class="fas fa-building"></i>
+          Grow with Google on Coursera
+        </p>
+
+        <p class="cert-date">
+          <i class="far fa-calendar"></i>
+          Issued May 2022
+        </p>
+
+        <p class="credential">
+          Credential ID:
+          <strong>GX7WUC2EESD6</strong>
+        </p>
+
+      </div>
+    </article>
+
+
+    <!-- 24 -->
+    <article
+      class="cert-card"
+      data-category="web"
+      data-search="Certificate Completion GDG KIIT"
+    >
+      <div class="cert-icon google-icon">
+        <i class="fab fa-google"></i>
+      </div>
+
+      <div class="cert-card-body">
+
+        <span class="cert-badge">2023</span>
+
+        <h3>Certificate of Completion</h3>
+
+        <p class="cert-issuer">
+          <i class="fas fa-building"></i>
+          GDG KIIT
+        </p>
+
+        <p class="cert-date">
+          <i class="far fa-calendar"></i>
+          Issued Feb 2023
+        </p>
+
+        <div class="cert-actions">
+          <a
+            href="https://drive.google.com/file/d/1Y98THww3rCtaDfd97cwogP2zcvFWm6lB/view?usp=sharing"
+            target="_blank"
+            class="cert-btn primary"
+          >
+            <i class="fas fa-certificate"></i>
+            View Credential
+          </a>
+        </div>
+
+      </div>
+    </article>
+
+
+    <!-- 25 -->
+    <article
+      class="cert-card"
+      data-category="web"
+      data-search="Certificate Completion Microsoft Learn Student Ambassadors KIIT"
+    >
+      <div class="cert-icon microsoft-icon">
+        <i class="fab fa-microsoft"></i>
+      </div>
+
+      <div class="cert-card-body">
+
+        <span class="cert-badge">2023</span>
+
+        <h3>Certificate of Completion</h3>
+
+        <p class="cert-issuer">
+          <i class="fas fa-building"></i>
+          Microsoft Learn Student Ambassadors, KIIT Chapter
+        </p>
+
+        <p class="cert-date">
+          <i class="far fa-calendar"></i>
+          Issued Feb 2023
+        </p>
+
+        <div class="cert-actions">
+          <a
+            href="https://drive.google.com/file/d/13bzgLfv1NAeZxhxPw1JDoQ4wU1h4_qWF/view?usp=sharing"
+            target="_blank"
+            class="cert-btn primary"
+          >
+            <i class="fas fa-certificate"></i>
+            View Credential
+          </a>
+        </div>
+
+      </div>
+    </article>
+
+  </div>
+
+  <div class="no-cert-results" id="noCertResults">
+    <i class="fas fa-search"></i>
+    <h3>No certifications found</h3>
+    <p>Try another search term or category.</p>
+  </div>
+
 </section>
-<div class="badge-base LI-profile-badge" data-locale="en_US" data-size="large" data-theme="light" data-type="VERTICAL" data-vanity="ifraah-tabassum-006618144" data-version="v1"><a class="badge-base__link LI-simple-link" href="https://in.linkedin.com/in/ifraah-tabassum-006618144?trk=profile-badge">Ifraah Tabassum</a></div>
-<script src="https://platform.linkedin.com/badges/js/profile.js" async defer type="text/javascript"></script>
-    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-    <!-- local js file -->
-    <script src="script.js"></script>
-  </body>
+
+
+<!-- =========================================================
+     TEST SCORES
+========================================================= -->
+<section class="test-scores section" id="test-scores">
+
+  <div class="section-title">
+    <span class="section-kicker">EXAMS & PERFORMANCE</span>
+    <h2>Test Scores</h2>
+    <p>
+      Selected competitive examinations, aptitude assessments
+      and technical evaluations.
+    </p>
+  </div>
+
+  <div class="scores-grid">
+
+    <article class="score-card featured-score">
+      <div class="score-icon">
+        <i class="fas fa-graduation-cap"></i>
+      </div>
+      <div>
+        <span>Feb 2026</span>
+        <h3>GATE 2026</h3>
+        <strong>247 / 1000</strong>
+      </div>
+    </article>
+
+    <article class="score-card">
+      <div class="score-icon">
+        <i class="fas fa-fighter-jet"></i>
+      </div>
+      <div>
+        <span>Jan 2026</span>
+        <h3>AFCAT 1 2026</h3>
+        <strong>86 / 300</strong>
+        <p>Qualified for technical branches.</p>
+      </div>
+    </article>
+
+    <article class="score-card">
+      <div class="score-icon">
+        <i class="fas fa-building"></i>
+      </div>
+      <div>
+        <span>Jan 2026</span>
+        <h3>BDL 2026 – Management Trainee (CS/IT)</h3>
+        <strong>62.5 / 150</strong>
+      </div>
+    </article>
+
+    <article class="score-card">
+      <div class="score-icon">
+        <i class="fas fa-landmark"></i>
+      </div>
+      <div>
+        <span>Jan 2026</span>
+        <h3>SEBI Grade A</h3>
+        <strong>66</strong>
+      </div>
+    </article>
+
+    <article class="score-card featured-score">
+      <div class="score-icon">
+        <i class="fas fa-brain"></i>
+      </div>
+      <div>
+        <span>Dec 2025</span>
+        <h3>TCS iON NQT – Cognitive</h3>
+        <strong>1505.02 / 1800</strong>
+        <p>83.61%</p>
+      </div>
+    </article>
+
+    <article class="score-card">
+      <div class="score-icon">
+        <i class="fab fa-java"></i>
+      </div>
+      <div>
+        <span>Nov 2025</span>
+        <h3>TCS iON NPT – Java Full Stack Developer</h3>
+        <strong>24 / 100</strong>
+        <p>First TCS iON NPT experience.</p>
+      </div>
+    </article>
+
+    <article class="score-card">
+      <div class="score-icon">
+        <i class="fas fa-graduation-cap"></i>
+      </div>
+      <div>
+        <span>Feb 2024</span>
+        <h3>GATE 2024</h3>
+        <strong>22 / 100</strong>
+        <p>Near to qualification marks.</p>
+      </div>
+    </article>
+
+    <article class="score-card">
+      <div class="score-icon">
+        <i class="fas fa-school"></i>
+      </div>
+      <div>
+        <span>Sep 2020</span>
+        <h3>JEE Mains</h3>
+        <strong>86%ile</strong>
+        <p>Ranked approximately 140K.</p>
+      </div>
+    </article>
+
+    <article class="score-card">
+      <div class="score-icon">
+        <i class="fas fa-medal"></i>
+      </div>
+      <div>
+        <span>Nov 2017</span>
+        <h3>MPNTSE 2017</h3>
+        <strong>120–121 / 150</strong>
+        <p>Associated with Kendriya Vidyalaya.</p>
+      </div>
+    </article>
+
+  </div>
+
+</section>
+
+
+    <!-- ================================
+         CONTACT + QR
+    ================================= -->
+
+    <section class="section contact" id="contact">
+
+      <div class="section-heading center reveal">
+
+        <span>07</span>
+
+        <p>GET IN TOUCH</p>
+
+        <h2>
+          Let's build something
+          <strong>great together.</strong>
+        </h2>
+
+      </div>
+
+
+      <div class="contact-grid">
+
+
+        <!-- Contact information -->
+
+        <div class="contact-info glass-card reveal">
+
+          <div class="contact-heading">
+            <span class="small-label">
+              CONTACT
+            </span>
+
+            <h3>
+              Have a project or opportunity?
+            </h3>
+
+            <p>
+              I'm always interested in discussing software development,
+              full-stack projects and new professional opportunities.
+            </p>
+          </div>
+
+
+          <a
+            href="mailto:tabassumifraah@gmail.com"
+            class="contact-item"
+          >
+
+            <div class="contact-icon">
+              <i class="fas fa-envelope"></i>
+            </div>
+
+            <div>
+              <small>Email</small>
+              <strong>tabassumifraah@gmail.com</strong>
+            </div>
+
+          </a>
+
+
+          <a
+            href="https://www.linkedin.com/in/ifraah-tabassum/"
+            target="_blank"
+            class="contact-item"
+          >
+
+            <div class="contact-icon">
+              <i class="fab fa-linkedin-in"></i>
+            </div>
+
+            <div>
+              <small>LinkedIn</small>
+              <strong>Connect with me</strong>
+            </div>
+
+          </a>
+
+
+          <a
+            href="https://github.com/IT0506"
+            target="_blank"
+            class="contact-item"
+          >
+
+            <div class="contact-icon">
+              <i class="fab fa-github"></i>
+            </div>
+
+            <div>
+              <small>GitHub</small>
+              <strong>View my repositories</strong>
+            </div>
+
+          </a>
+
+        </div>
+
+
+        <!-- ONE QR CODE ONLY -->
+
+        <div class="qr-card glass-card reveal">
+
+          <div class="qr-header">
+
+            <div class="qr-icon">
+              <i class="fas fa-qrcode"></i>
+            </div>
+
+            <div>
+              <span>SCAN MY PORTFOLIO</span>
+              <h3>Take my portfolio with you.</h3>
+            </div>
+
+          </div>
+
+
+          <div class="qr-wrapper">
+
+            <!-- IMPORTANT:
+                 This is the ONLY QR container.
+                 JavaScript generates ONE QR here.
+            -->
+
+            <div
+              id="qrcode"
+              class="qrcode"
+              aria-label="QR code for Ifraah Tabassum portfolio"
+            ></div>
+
+          </div>
+
+
+          <p class="qr-url">
+            https://it0506.github.io/
+          </p>
+
+
+          <button
+            id="downloadQr"
+            class="qr-download"
+            type="button"
+          >
+            <i class="fas fa-download"></i>
+            Download QR Code
+          </button>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- ================================
+       FOOTER
+  ================================= -->
+
+  <footer class="footer">
+
+    <div class="footer-inner">
+
+      <a href="#home" class="footer-logo">
+        Ifraah<span>.</span>
+      </a>
+
+      <p>
+        Designed & developed by Ifraah Tabassum.
+      </p>
+
+      <div class="footer-socials">
+
+        <a
+          href="https://github.com/IT0506"
+          target="_blank"
+          aria-label="GitHub"
+        >
+          <i class="fab fa-github"></i>
+        </a>
+
+        <a
+          href="https://www.linkedin.com/in/ifraah-tabassum/"
+          target="_blank"
+          aria-label="LinkedIn"
+        >
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+
+        <a
+          href="mailto:tabassumifraah@gmail.com"
+          aria-label="Email"
+        >
+          <i class="fas fa-envelope"></i>
+        </a>
+
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      © <span id="currentYear"></span> Ifraah Tabassum · All rights reserved.
+    </div>
+
+  </footer>
+
+
+  <!-- SCROLL TOP -->
+
+  <button
+    class="scroll-top"
+    id="scrollTop"
+    aria-label="Scroll to top"
+  >
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+
+  <script src="script.js"></script>
+
+</body>
+
 </html>
